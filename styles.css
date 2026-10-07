@@ -70,3 +70,40 @@
 @media(min-width:1101px) and (max-width:1400px){.knowledge-deck,.cinema-deck,.source-deck{padding-right:70px}.knowledge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:1100px){.knowledge-deck,.cinema-deck,.source-deck{padding:80px 8vw}.knowledge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.knowledge-grid,.cinema-grid,.source-links{grid-template-columns:1fr}}
+
+/* Searchable reading collection and a compact educational field lab. */
+.archive-search{display:grid;grid-template-columns:auto minmax(180px,1fr) auto;gap:20px;align-items:center;margin:0 0 35px;padding:22px 0;border-block:1px solid var(--line)}
+.archive-search label{font-size:14px;color:var(--cyan)}
+.archive-search input{width:100%;min-height:46px;padding:12px 16px;border:1px solid var(--line);background:#030d14;color:var(--ink);font:15px var(--mono)}
+.archive-search input::placeholder{color:#8daeb4}
+.archive-search output{font-size:12px;color:#bdd8dc;white-space:nowrap}
+.archive-empty{padding:35px;border:1px solid var(--line);color:#b8d9de;line-height:1.8}
+.knowledge-card small a{color:var(--cyan);text-decoration-thickness:1px;text-underline-offset:3px}
+.lab-deck{position:relative;z-index:5;padding:110px max(170px,10vw);background:#04131b;border-top:1px solid var(--line)}
+.methods-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:38px}
+.echo-lab,.sample-lab{min-width:0;padding:32px;border:1px solid var(--line);background:#061a24}
+.methods-grid h3{font:400 30px/1.4 var(--serif);margin:18px 0 30px}
+.echo-lab label{display:flex;justify-content:space-between;gap:15px;font-size:14px;color:#d3e9e9;margin-top:25px}
+.echo-lab label output{color:var(--cyan);font-family:monospace}
+.echo-lab input{display:block;width:100%;height:35px;margin:10px 0;accent-color:var(--cyan);cursor:pointer}
+.echo-track{position:relative;height:85px;margin:28px 0;border-bottom:1px solid #6df3ef44;--echo-distance:23.4%}
+.echo-track span,.echo-track b{position:absolute;bottom:12px;color:#a5dadd;font-size:12px;font-weight:400}
+.echo-track span{left:0}.echo-track b{left:clamp(12%,var(--echo-distance),88%)}
+.echo-track i{position:absolute;left:0;top:25px;width:clamp(12%,var(--echo-distance),88%);height:1px;background:var(--cyan);box-shadow:0 0 12px #6df3ef88}
+.echo-track i:after{content:"";position:absolute;right:0;top:-4px;width:8px;height:8px;border:1px solid var(--cyan);border-radius:50%;background:#061a24}
+.echo-result{font-size:14px;color:#c7dcdf}.echo-result output{display:block;font:400 50px/1.3 monospace;color:var(--cyan);margin-top:8px}
+#echoFormula{font:13px/1.8 monospace;color:#a9c8cc}
+.method-note,.sample-lab li p{font:15px/1.9 var(--serif);color:#bcd5da}
+.sample-lab ol{list-style:none;counter-reset:sample;padding:0;margin:0}
+.sample-lab li{counter-increment:sample;position:relative;padding-left:45px;margin-bottom:25px}
+.sample-lab li:before{content:"0" counter(sample);position:absolute;left:0;top:2px;font:13px monospace;color:var(--cyan)}
+.sample-lab li b{font-weight:400;font-size:17px;color:#e0edef}.sample-lab li p{margin:8px 0}
+.glossary-title{font:400 24px/1.5 var(--serif);margin:70px 0 25px;color:#d1e8eb}
+.glossary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 35px;margin:0}
+.glossary-entry{padding:25px 0;border-top:1px solid var(--line);min-width:0}
+.glossary-entry dt{font:400 19px/1.6 var(--serif);color:#d4ebed}.glossary-entry dt span{display:block;font:11px/1.7 monospace;color:var(--cyan);letter-spacing:.12em;margin-bottom:10px}
+.glossary-entry dd{margin:12px 0 0;font:15px/1.8 var(--serif);color:#b8d2d7}
+.archive-search input:focus-visible,.echo-lab input:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+@media(min-width:1101px) and (max-width:1400px){.lab-deck{padding-right:70px}.methods-grid{gap:24px}.echo-lab,.sample-lab{padding:26px}}
+@media(max-width:1100px){.lab-deck{padding:80px 8vw}.methods-grid{grid-template-columns:1fr}.glossary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.archive-search{grid-template-columns:1fr;gap:12px}.glossary-grid{grid-template-columns:1fr}}
