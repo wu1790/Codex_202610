@@ -9,6 +9,9 @@
 </head>
 <body>
   <a class="skip" href="#sunlight">跳至探索区域</a><canvas id="particles" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div>
+  <div class="viewport-fx" aria-hidden="true"><div class="caustics"></div><div class="vignette"></div><div class="reticle"><i></i><b></b></div><div class="cursor-light" id="cursorLight"></div></div>
+  <div class="descent-track" aria-hidden="true"><i id="descentProgress"></i><span>SURFACE</span><span>ABYSS</span></div>
+  <div class="milestone" id="milestone" role="status" aria-live="polite"><small>DEPTH MILESTONE</small><b id="milestoneDepth">1,000 M</b><span id="milestoneText">光线已完全消失</span></div>
   <header class="topbar">
     <a class="brand" href="#surface" aria-label="返回海面"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="8"/><path d="M24 4v12m0 16v12M4 24h12m16 0h12"/></svg><span>ABYSS<br><small>深渊档案</small></span></a>
     <span class="mission">MISSION · HX-07 / 2026</span><button class="log-open" id="logOpen" aria-controls="log" aria-expanded="false">探索日志 <b id="logCount">0</b></button>
@@ -29,13 +32,13 @@
       <dl class="zone-data"><div><dt>光照强度</dt><dd>0.8 lux</dd></div><div><dt>生物发光</dt><dd>COMMON</dd></div><div><dt>昼夜迁徙</dt><dd>ACTIVE</dd></div></dl>
     </section>
 
-    <section class="zone midnight" id="midnight"><div class="searchlight"></div><span class="index">03 / 04</span><div class="heading"><p>THE MIDNIGHT ZONE</p><h2>太阳已是<br>遥远的记忆</h2><span>1,000 — 4,000 M</span></div>
+    <section class="zone midnight" id="midnight"><div class="searchlight"></div><div class="leviathan" aria-hidden="true"><i></i><b></b></div><span class="index">03 / 04</span><div class="heading"><p>THE MIDNIGHT ZONE</p><h2>太阳已是<br>遥远的记忆</h2><span>1,000 — 4,000 M</span></div>
       <article class="specimen squid-card" data-name="巨型乌贼"><svg class="squid creature" viewBox="0 0 720 500" role="img" aria-label="巨型乌贼的远处轮廓"><path d="M465 74c75 49 111 131 78 201-31 67-119 94-208 64-90-30-144-107-121-178 25-77 160-147 251-87Z"/><path d="M330 329c-22 99-80 152-168 162M367 341c-1 90-28 134-73 157M411 337c18 76 7 123-27 162M455 317c44 75 49 125 18 175M495 293c72 62 97 111 75 164"/><circle cx="270" cy="210" r="30"/><circle cx="270" cy="210" r="9"/></svg><div class="tag"><span>SPC-03</span><h3>巨型乌贼</h3><small>ARCHITEUTHIS DUX</small><button class="discover">记录发现 +</button></div></article>
       <div class="scale"><i></i><span>HOV<br>2.4 M</span><b></b><span>UNKNOWN<br>≈ 18.6 M</span></div><div class="observation warning"><span>VISUAL CONTACT</span><p>目标仅进入探照灯边缘 3.8 秒。推测其长度超过科考艇七倍。</p></div>
       <dl class="zone-data"><div><dt>太阳辐射</dt><dd>0%</dd></div><div><dt>平均压力</dt><dd>250 atm</dd></div><div><dt>食物来源</dt><dd>MARINE SNOW</dd></div></dl>
     </section>
 
-    <section class="zone hadal" id="hadal"><span class="index">04 / 04</span><div class="heading"><p>THE HADAL ZONE</p><h2>地球的<br>最后一层</h2><span>4,000 M +</span></div><div class="trench"></div>
+    <section class="zone hadal" id="hadal"><div class="vent-field" id="ventField" aria-hidden="true"></div><span class="index">04 / 04</span><div class="heading"><p>THE HADAL ZONE</p><h2>地球的<br>最后一层</h2><span>4,000 M +</span></div><div class="trench"></div>
       <dl class="zone-data"><div><dt>地形落差</dt><dd>2,180 m</dd></div><div><dt>水温</dt><dd>1.7 °C</dd></div><div><dt>通讯延迟</dt><dd>4.2 sec</dd></div></dl>
       <div class="signal-console"><div class="signal" aria-hidden="true"></div><div><p>UNIDENTIFIED SIGNAL · 7.83 Hz</p><h3>重复信号来自海沟下方</h3><button class="primary compact" id="decode"><span>解析信号</span><i>⌁</i></button></div><div class="decoded" id="decoded" aria-live="polite"><span>ARCHIVE HX-07 / FRAGMENT 09</span><p>“信号并非从某一个点发出。整片海床，都在以相同的间隔回应。”</p><small>记录结束 · 来源无法确认</small></div></div>
     </section>
