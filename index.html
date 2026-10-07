@@ -15,7 +15,7 @@
   <div class="dive-curtain" id="diveCurtain" aria-hidden="true"><i></i><div><small>HATCH SEALED · BALLAST RELEASED</small><b>DESCENDING</b><span>下潜程序启动</span></div></div>
   <header class="topbar">
     <a class="brand" href="#surface" aria-label="返回海面"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="8"/><path d="M24 4v12m0 16v12M4 24h12m16 0h12"/></svg><span>ABYSS<br><small>深渊档案</small></span></a>
-    <span class="mission">MISSION · HX-07 / 2026</span><button class="log-open" id="logOpen" aria-controls="log" aria-expanded="false">探索日志 <b id="logCount">0</b></button>
+    <span class="mission">MISSION · HX-07 / 2026</span><div class="header-actions"><button class="hud-button" id="soundToggle" type="button" aria-pressed="false">音景 <b>OFF</b></button><button class="hud-button screen-button" id="screenToggle" type="button">全屏</button><button class="log-open" id="logOpen" aria-controls="log" aria-expanded="false">探索日志 <b id="logCount">0</b></button></div>
   </header>
   <aside class="telemetry" id="telemetry" aria-label="实时下潜数据"><div class="tele-head">LIVE TELEMETRY <i></i></div><div class="depth"><b id="depth">0000</b><span>M</span></div><dl><div><dt>区域</dt><dd id="zone">海平面</dd></div><div><dt>压力</dt><dd id="pressure">1.0 atm</dd></div><div><dt>温度</dt><dd id="temp">24.0 °C</dd></div><div><dt>能见度</dt><dd id="visibility">100%</dd></div></dl><i class="meter"><b id="marker"></b></i></aside>
   <main>
@@ -43,6 +43,8 @@
       <dl class="zone-data"><div><dt>地形落差</dt><dd>2,180 m</dd></div><div><dt>水温</dt><dd>1.7 °C</dd></div><div><dt>通讯延迟</dt><dd>4.2 sec</dd></div></dl>
       <div class="signal-console"><div class="signal" aria-hidden="true"></div><div><p>UNIDENTIFIED SIGNAL · 7.83 Hz</p><h3>重复信号来自海沟下方</h3><button class="primary compact" id="decode"><span>解析信号</span><i>⌁</i></button></div><div class="decoded" id="decoded" aria-live="polite"><span>ARCHIVE HX-07 / FRAGMENT 09</span><p>“信号并非从某一个点发出。整片海床，都在以相同的间隔回应。”</p><small>记录结束 · 来源无法确认</small></div></div>
     </section>
+
+    <section class="scale-chapter" id="scaleChapter"><div class="scale-copy"><p>THE SCALE OF THE ABYSS</p><h2>六千米，<br>究竟有多深？</h2><blockquote>如果把珠穆朗玛峰沉入这里，峰顶上方仍会覆盖近三千米海水。</blockquote></div><div class="depth-comparison" aria-label="著名建筑与深海尺度比较"><div style="--height:9%"><span>东方明珠</span><b>468 M</b><i></i></div><div style="--height:16%"><span>哈利法塔</span><b>828 M</b><i></i></div><div style="--height:54%"><span>马里亚纳海沟</span><b>10,935 M</b><i></i></div><div class="mission-depth" style="--height:31%"><span>HX-07 本次下潜</span><b>6,200 M</b><i></i></div><em>SEA LEVEL</em></div></section>
 
     <section class="debrief"><p class="kicker">MISSION DEBRIEF · HX-07</p><h2>你已抵达<br><em>光之外。</em></h2><div class="stats"><div><span>最大深度</span><b id="maxDepth">0000 M</b></div><div><span>已发现物种</span><b id="found">0 / 3</b></div><div><span>任务状态</span><b>信号持续</b></div></div><div class="briefing"><p>任务记录 / 07</p><blockquote>海洋覆盖了地球表面的七成，而我们对它的了解仍少于月球背面。每一次下潜，都是在重新绘制人类世界的边界。</blockquote><ol><li><span>06:42</span>科考艇离开海面，遥测稳定</li><li><span>07:19</span>进入暮光区，首次捕捉生物光</li><li><span>08:53</span>深度超过 4,000 米，接收异常信号</li></ol></div><button class="primary return" id="return"><span>返回水面</span><i>↑</i></button><p class="closing">THE OCEAN IS NOT EMPTY. IT IS LISTENING.</p></section>
   </main>
