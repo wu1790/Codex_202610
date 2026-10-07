@@ -9,7 +9,7 @@
 </head>
 <body>
   <a class="skip" href="#sunlight">跳至探索区域</a><canvas id="particles" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div>
-  <div class="viewport-fx" aria-hidden="true"><div class="caustics"></div><div class="vignette"></div><div class="reticle"><i></i><b></b></div><div class="cursor-light" id="cursorLight"></div></div>
+  <div class="viewport-fx" aria-hidden="true"><div class="caustics"></div><div class="vignette"></div><div class="reticle"><i></i><b></b></div><div class="cursor-light" id="cursorLight"></div><svg class="pressure-cracks" viewBox="0 0 1000 700" preserveAspectRatio="none"><path d="M0 110 92 137l48 57 82 21 29 68 94 42M92 137l-17 79m65-22 79-53m32 122-48 74M1000 584l-104-21-37-66-81-23-31-74-68-31m180 128 18-83m19 149-62 66m-87-229 49-65"/></svg></div>
   <div class="descent-track" aria-hidden="true"><i id="descentProgress"></i><span>SURFACE</span><span>ABYSS</span></div>
   <div class="milestone" id="milestone" role="status" aria-live="polite"><small>DEPTH MILESTONE</small><b id="milestoneDepth">1,000 M</b><span id="milestoneText">光线已完全消失</span></div>
   <div class="dive-curtain" id="diveCurtain" aria-hidden="true"><i></i><div><small>HATCH SEALED · BALLAST RELEASED</small><b>DESCENDING</b><span>下潜程序启动</span></div></div>
@@ -41,7 +41,7 @@
 
     <section class="zone hadal" id="hadal" data-ghost="6200"><div class="vent-field" id="ventField" aria-hidden="true"></div><span class="index">04 / 04</span><div class="heading"><p>THE HADAL ZONE</p><h2>地球的<br>最后一层</h2><span>4,000 M +</span></div><div class="trench"></div>
       <dl class="zone-data"><div><dt>地形落差</dt><dd>2,180 m</dd></div><div><dt>水温</dt><dd>1.7 °C</dd></div><div><dt>通讯延迟</dt><dd>4.2 sec</dd></div></dl>
-      <div class="signal-console"><div class="signal" aria-hidden="true"></div><div><p>UNIDENTIFIED SIGNAL · 7.83 Hz</p><h3>重复信号来自海沟下方</h3><button class="primary compact" id="decode"><span>解析信号</span><i>⌁</i></button></div><div class="decoded" id="decoded" aria-live="polite"><span>ARCHIVE HX-07 / FRAGMENT 09</span><p>“信号并非从某一个点发出。整片海床，都在以相同的间隔回应。”</p><small>记录结束 · 来源无法确认</small></div></div>
+      <div class="signal-console"><div class="signal" aria-hidden="true"></div><div><p>UNIDENTIFIED SIGNAL · 7.83 Hz</p><h3>重复信号来自海沟下方</h3><button class="primary compact" id="decode"><span>解析信号</span><i>⌁</i></button></div><div class="decoded" id="decoded" aria-live="polite"><span>ARCHIVE HX-07 / FRAGMENT 09</span><p>“信号并非从某一个点发出。整片海床，都在以相同的间隔回应。”</p><dl class="signal-meta"><div><dt>首次接收</dt><dd>08:53:17</dd></div><div><dt>重复周期</dt><dd>11.4 SEC</dd></div><div><dt>匹配来源</dt><dd>NONE</dd></div></dl><small>记录结束 · 来源无法确认</small></div></div>
     </section>
 
     <section class="scale-chapter" id="scaleChapter"><div class="scale-copy"><p>THE SCALE OF THE ABYSS</p><h2>六千米，<br>究竟有多深？</h2><blockquote>如果把珠穆朗玛峰沉入这里，峰顶上方仍会覆盖近三千米海水。</blockquote></div><div class="depth-comparison" aria-label="著名建筑与深海尺度比较"><div style="--height:9%"><span>东方明珠</span><b>468 M</b><i></i></div><div style="--height:16%"><span>哈利法塔</span><b>828 M</b><i></i></div><div style="--height:54%"><span>马里亚纳海沟</span><b>10,935 M</b><i></i></div><div class="mission-depth" style="--height:31%"><span>HX-07 本次下潜</span><b>6,200 M</b><i></i></div><em>SEA LEVEL</em></div></section>
